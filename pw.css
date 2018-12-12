@@ -1,0 +1,306 @@
+.nameBar{
+
+  position:fixed;
+  top:0px;
+  text-align: center;
+  height:150px;
+  width: 100%;
+  background-color: rgb(232,240,240);
+  margin:0px;
+  z-index: 100;
+  -webkit-transition: height 1s;
+   transition: height 1s;
+
+
+}
+
+.bar{
+
+  position: relative;
+  margin-top: 30px;
+  -webkit-transition: margin-top 1s;
+   transition: margin-top 1s;
+  /* margin-bottom: 50px; */
+  /* -webkit-transition:  1s;
+   transition:  1s; */
+}
+
+
+
+
+.scrolled{
+
+  background-color: black;
+  transition:0.5s;
+
+
+}
+
+
+
+h1{
+  font-family:'Allura',cursive;
+  font-size: 40px;
+  display: inline;
+  position: relative;
+  top:25px;
+
+
+  -webkit-transition: font-family 1s, font-size 1s,top 1s;
+   transition: font-family 1s, font-size 1s, top 1s;
+
+}
+
+
+/* h1:hover{
+
+  font-family: 'Playfair Display',serif;
+  font-size: 20px;
+  top: 10px;
+} */
+
+
+
+body{
+
+  margin:0px;
+  padding:0px;
+
+
+
+}
+ul{
+
+  list-style-type: none;
+  margin-top:20px;
+  padding: 0px;
+
+}
+
+
+ul.bar > li{
+  /* position: absolute; */
+  float: left;
+}
+
+
+li a {
+
+  /* display: inline; */
+
+  font-size: 14px;
+  color: black;
+  font-family: 'Nunito',sans-serif;
+  padding: 40px;
+  text-decoration: none;
+
+}
+
+
+
+.articles a{
+
+  text-decoration: none;
+  color:black;
+}
+
+
+.recentPosts a{
+  text-decoration: none;
+  color:black;
+
+}
+
+
+/* .column{
+
+   float: left;
+   /* display: inline-block; */
+
+/* }
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+} */
+
+#selfpage{
+
+  /* position: relative;
+  left: 60px;
+  top: 50px; */
+  /* text-align: center; */
+  /* background-color: red; */
+
+
+
+}
+
+#profile{
+    /* background-color: lightgrey; */
+    position:relative;
+    margin-left: 35px;
+    top: 40px;
+
+}
+
+#about{
+
+   /* background-color:lightblue; */
+   position: relative;
+   margin-left:60px;
+   top: 10px;
+
+}
+
+p.introduction{
+
+  font-family: "Nunito",sans-serif;
+  font-size: 14px;
+
+
+}
+
+div.row{
+   display: grid;
+   grid-template-columns: 20% 70%;
+   width:70%;
+   background-color: white;
+   margin-left:auto;
+   margin-right: auto;
+   position: relative;
+   left: 60px;
+   top: 200px;
+
+}
+
+
+.footer{
+
+  display: grid;
+  grid-template-columns: 70% 20%;
+
+  position: relative;
+  top:300px;
+  left: 200px;
+  /* font-family: "Nunito",sans-serif;
+  font-size:20px; */
+
+}
+
+i{
+
+   margin: 0px 5px;
+   font-family: "Nunito",sans-serif;
+   font-size:20px;
+
+}
+
+
+.players{
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right:auto;
+
+
+}
+
+.articles > img{
+
+
+  background: none;
+  padding: 0px;
+  margin:10px;
+
+
+
+}
+
+
+
+.articles{
+
+  position: relative;
+  top: 200px;
+  background: none;
+  max-width: 90%;
+  margin:0 auto;
+  margin-left:auto;
+  margin-right:auto;
+
+  font-family: 'Nunito',sans-serif;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+
+}
+
+
+.articles > div{
+
+
+  background: none;
+  padding: 0px;
+  margin:12px;
+
+
+}
+
+
+.articles > div:nth-child(even){
+
+ background: none;
+
+}
+
+
+p.dates{
+
+   padding: 1px;
+   margin: 0px;
+   color: rgba(0,0,0,0.5);
+   font-size: 15px;
+   font-family:
+
+}
+
+p.titles{
+  padding: 1px;
+  margin-bottom: 12px;
+
+  font-size: 18px;
+  font-family: 'Nunito',sans-serif;
+  text-transform: uppercase;
+}
+
+.nbafortune img{
+
+   width:250px;
+   height: 450px;
+
+
+
+}
+
+
+textarea::placeholder{
+
+  font-family: "Nunito",sans-serif;
+  font-size:15px;
+}
+
+
+textarea{
+
+  font-family: "Nunito",sans-serif;
+  padding:12px;
+  font-size:15px;
+
+
+
+
+}

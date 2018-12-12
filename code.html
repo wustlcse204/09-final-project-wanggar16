@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+
+
+
+<head>
+
+  <title> Gary Wang - a content developer that writes, speaks, and designs. </title>
+
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Allura|Nunito" rel="stylesheet">
+
+  <link rel = "stylesheet" href = "pw.css" type = "text/css">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+
+
+
+
+
+
+</head>
+
+<body style = "background-color:none">
+
+  <div id = "navNameBar" class = "nameBar">
+    <h1 id = "GaryWang" class = "myName">Gary Wang<h1>
+      <div class = "navigationBar" style = "text-align:center;">
+
+        <ul id = "menu" class = "bar" style = "display:inline-block;">
+
+          <li><a href = GaryWang.html> ABOUT</a></li>
+          <li><a href= speak.html> SPEAK </a></li>
+          <li><a href = write.html> WRITE</a></li>
+          <li><a href = code.html> CODE </a></li>
+          <li><a href = shot.html> FIT</a></li>
+        </ul>
+
+
+
+      </div>
+    </div>
+
+
+
+
+    <div class = "players" style = "position:relative;top:200px;">
+      <img id = "kyrie" onmouseover="detailedView(this)" onmouseout="defaultImage(this)"src = "kyrie.png" width = 200px>
+      <img id = "steph" onmouseover = "detailedView(this)" onmouseout="defaultImage(this)" src = "steph.png" width = 200px>
+      <img id = "harden" onmouseover = "detailedView(this)" onmouseout="defaultImage(this)" src = "harden.png" width = 200px>
+      <img id = "james" onmouseover = "detailedView(this)" onmouseout="defaultImage(this)" src = "james.png" width = 200px>
+      <img id = "wade" onmouseover = "detailedView(this)" onmouseout="defaultImage(this)" src = "wade.png" width= 200px>
+
+    </div>
+
+
+
+
+
+
+    <div class = "footer" style = "width: 80%;background:none;">
+      <div class = "socialMedia">
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-weixin"></i>
+        <i class="fas fa-envelope"></i>
+      </div>
+      <div >
+       <p style = "font-size: 12px;font-family: 'Nunito',sans-serif;position: relative;bottom:12px;">©Copyright 2018</p>
+     </div>
+
+    </div>
+
+
+
+    <script>
+
+    function defaultImage(x){
+
+      if(x.id == "kyrie"){
+        x.setAttribute("src","kyrie.png");
+
+      }
+
+      else if(x.id == "steph"){
+          x.setAttribute("src","steph.png");
+      }
+
+      else if(x.id == "harden"){
+          x.setAttribute("src","harden.png");
+      }
+
+      else if(x.id == "james"){
+          x.setAttribute("src","james.png");
+      }
+
+      else if(x.id == "wade"){
+          x.setAttribute("src","wade.png");
+      }
+
+
+
+
+
+
+
+    }
+
+
+    function detailedView(x){
+       if(x.id == "kyrie"){
+          x.setAttribute("src","homePage.JPG");
+       }
+
+       else if(x.id == "steph"){
+           x.setAttribute("src","stockMarket.png");
+       }
+
+       else if(x.id == "harden"){
+           x.setAttribute("src","jdsv.png");
+       }
+
+       else if(x.id == "james"){
+           x.setAttribute("src","jamesDetailedView.png");
+       }
+
+       else if(x.id == "wade"){
+           x.setAttribute("src","buy.png");
+       }
+
+
+
+
+    }
+
+
+
+    </script>
+
+
+    <script>
+
+
+
+     window.addEventListener("scroll",yScroll);
+     var topBar, gwBar,menuBar,yPos
+
+     function yScroll(){
+
+       topBar = document.getElementById("navNameBar");
+       gwBar = document.getElementById("GaryWang");
+       menuBar = document.getElementById("menu");
+       yPos = window.pageYOffset;
+
+       if(yPos > 150){
+           topBar.style.height = "85px";
+           gwBar.style.fontFamily = "Playfair Display,serif";
+           gwBar.style.fontSize = "20px";
+           gwBar.style.top = "2px";
+           menuBar.style.marginTop  = "-30px";
+
+
+       } else{
+           topBar.style.height = "150px";
+           gwBar.style.fontFamily = "Allura,cursive";
+           gwBar.style.fontSize = "40px";
+           gwBar.style.top = "25px";
+           menuBar.style.marginTop  = "30px";
+
+
+       }
+
+
+
+     }
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+</html>

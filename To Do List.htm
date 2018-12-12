@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<!-- saved from url=(0066)file:///Users/GaryWang/Documents/GitHub/07-todo-wanggar/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <title>
+       To Do List
+    </title>
+
+    <style>
+
+     .completed{
+
+     }
+
+
+
+
+
+
+
+
+
+    </style>
+
+</head>
+
+
+
+
+<body>
+     <input type="text" id="firstToDo" placeholder="Enter a task">
+     <button type="click" id="add"> add </button>
+     <button id="myBtn"> show </button>
+     <button id="getOne"> getOne </button>
+     <p id="demo"> </p>
+
+     <article id="article">
+       <p> I wish you can figure it out.</p>
+     </article>
+
+
+
+<script>
+
+document.getElementById("add").addEventListener("click",postAItem);
+document.getElementById('myBtn').addEventListener("click",getAll);
+//document.getElementById('finish').addEventListener("click",getOne);
+
+var todos;
+var data;
+
+//post a item
+
+function postAItem(event){
+
+   event.preventDefault();
+
+   data = {
+
+     text: document.getElementById("firstToDo").value
+
+   }
+
+   var xhttp2 = new XMLHttpRequest();
+
+   xhttp2.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200){
+      //
+      todos = JSON.parse(this.responseText);
+      console.log(todos);
+
+    } else if (this.readyState == 4){
+      console.log(this.responseText);
+    }
+
+  }
+
+  xhttp2.open("POST","https://api.kraigh.net/todos",true);
+  xhttp2.setRequestHeader("Content-type","application/json");
+  xhttp2.setRequestHeader("x-api-key","e60d217fe8e90f001bfda82d1fbc3e91edbcb1b82d7fed0df0ab7f4d775ac882");
+  xhttp2.send(JSON.stringify(data));
+
+
+  var textbox = document.createElement("p");
+  //textbox.innerHTML = text;
+
+}
+// ----------------------
+
+//grab one item
+// Setting variable for ToDo id
+
+
+
+
+
+function getAll(){
+
+  //var todos;
+
+  event.preventDefault();
+
+  var xhttp = new XMLHttpRequest();
+
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      todos = JSON.parse(this.responseText);
+      var length = todos.length;
+      var word = todos[length-1].text
+      console.log(word);
+
+
+      //add to the list
+
+      var todoText = document.createElement('p');
+      todoText.innerHTML = word;
+      var todo = document.getElementById('article');
+      todo.appendChild(todoText);
+
+
+      // create my text
+      // var node = document.getElementById('node-id');
+      // var newNode = document.createElement('p');
+      // newNode.appendChild(document.createTextNode('some dynamic html'));
+      // node.appendChild(newNode);
+
+     finish.addEventListener("click",complete);
+
+
+
+    }
+  };
+
+  xhttp.open("GET", "https://api.kraigh.net/todos", true);
+  xhttp.setRequestHeader("x-api-key","e60d217fe8e90f001bfda82d1fbc3e91edbcb1b82d7fed0df0ab7f4d775ac882");
+  xhttp.send();
+
+  // for (let index = 0; index < todos.size; index++) {
+  //  // Create todo container
+  //    var todo = document.createElement("article");
+  //    todo.setAttribute("id", todos[index].id);
+  //    todo.setAttribute("class", "todo");
+  //    if (todos[index].completed) {
+  //      todo.classList += " completed";
+  //   }
+  //
+  //  // ... add a completed button ...
+  //
+  //  // Create todo text
+  //  var todoText = document.createElement("p");
+  //  todoText.innerHTML = todos[index].text;
+  //  todo.appendChild(todoText);
+  //
+  //  // ... add a delete button ...
+  //
+  //  // Add your todo to your list of todos
+  //  document.getElementById("todos").appendChild(todo);
+
+   // Alternate approach
+   // var todo = todos[index];
+   // if (todo.completed) {
+   //     var classes = 'todo checked';
+   // } else {
+   //     var classes = 'todo';
+   // }
+   // var newTodo = '<article class="'+classes+'" id="' + todo.id + '"><button type="button" class="check"></button><p>' + todo.text + '</p><button type="button" class="delete">-</button></article >';
+   // document.getElementById("todos").innerHTML += newTodo;
+
+   // "completeButton" here is an element created above. Could also use "document.getElementById(".your-complete-button").addEventListener...   //completeButton.addEventListener("click", completeTodo);
+ }
+
+function complete(event){
+
+     var todoId = event.srcElement.parentNode.id;
+
+     var url = "https://api.kraigh.net/todos/"+ todoId;
+
+     var data = JSON.stringify({
+
+       "completed":true
+
+     });
+
+     event.srcElement.parentNode.classList += "completed"
+
+}
+
+
+
+
+</script>
+
+
+
+
+
+
+
+</body></html>

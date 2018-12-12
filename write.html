@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+
+
+<head>
+
+  <title> Gary Wang - a content developer that writes, speaks, and designs. </title>
+
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Allura|Nunito" rel="stylesheet">
+
+  <link rel = "stylesheet" href = "pw.css" type = "text/css">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+ <style>
+
+
+
+
+
+
+
+ </style>
+
+
+</head>
+
+<body>
+
+  <div id = "navNameBar" class = "nameBar">
+      <h1 id = "GaryWang" class = "myName">Gary Wang<h1>
+        <div  class = "navigationBar" style = "text-align:center;">
+          <ul id = "menu" class = "bar" style = "display:inline-block;">
+
+             <li><a href = GaryWang.html> ABOUT</a></li>
+             <li><a href= speak.html> SPEAK </a></li>
+             <li><a href = write.html> WRITE</a></li>
+             <li><a href = code.html> CODE </a></li>
+             <li><a href = shot.html> FIT</a></li>
+           </ul>
+         </div>
+ </div>
+
+
+       <div class = "articles" style = "background:none;">
+
+         <div>
+           <p class = "dates">Oct.12,2018<p>
+             <p class = "titles"> <a href = commercialisation.html>La commercialisation du sport </a></p>
+             <img class = "images" src = "sport1.jpg" width = 360px height = 210px >
+
+
+           </div>
+           <div> <p class = "dates">Oct.01,2018<p>
+             <p class = "titles"> <a href = uber_driver.html> Uber drivers taught me to drive </a></p>
+             <img class = "images" src = "car2.jpeg" width = 360px height = 210px >
+           </div>
+           <div> <p class = "dates">Sept.15,2018<p>
+             <p class = "titles"><a href = asl.html>american sign language guides me</a>  </p>
+             <img class = "images" src = "signs.jpg" width = 360px height = 210px >
+           </div>
+           <div> <p class = "dates">Aug.12,2018<p>
+             <p class = "titles"> <a href = footballPopular.html>Le Football</a> </p>
+             <img class = "images" src = "football.jpeg" width = 360px height = 210px >
+           </div>
+           <div> <p class = "dates">June.08,2018<p>
+             <p class = "titles"> <a href = teachChinese.html>你能教我开车吗？</a> </p>
+             <img class = "images" src = "carshare.jpg" width = 360px height = 210px >
+           </div>
+           <div> <p class = "dates">May.12,2018<p>
+             <p class = "titles"> <a href = film.html>Le Film Trop Tard </a></p>
+             <img class = "images" src = "croissant.jpeg" width = 360px height = 210px >
+           </div>
+           <div> <p class = "dates">March.21,2018<p>
+             <p class = "titles"> <a href = novel1.html>Quoi c'est roman</a></p>
+             <img class = "images" src = "car2.jpeg" width = 360px height = 210px >
+           </div>
+           <div> <p class = "dates">January.08,2018<p>
+             <p class = "titles"> <a href = superMarketDriver.html> 和优步司机一起逛超市！</a></p>
+             <img class = "images" src = "supermart.jpeg" width = 360px height = 210px >
+           </div>
+           <div> <p class = "dates">December.21,2017<p>
+             <p class = "titles"><a href = roman2.html> L'élégance du hérisson </a></p>
+             <img class = "images" src = "paris.jpeg" width = 360px height = 210px >
+           </div>
+
+
+       </div>
+
+
+
+       <div class = "footer" style = "width: 80%;">
+
+        <div class = "socialMedia">
+
+        <i class="fab fa-instagram"></i>
+
+        <i class="fab fa-facebook-f"></i>
+
+        <i class="fab fa-weixin"></i>
+
+        <i class="fas fa-envelope"></i>
+
+        </div>
+
+        <div >
+
+          <p style = "font-size: 12px;font-family: 'Nunito',sans-serif;position: relative;bottom:12px;">©Copyright 2018</p>
+
+       </div>
+
+       </div>
+
+
+
+
+
+       <script>
+
+
+
+        window.addEventListener("scroll",yScroll);
+        var topBar, gwBar,menuBar,yPos
+
+        function yScroll(){
+
+          topBar = document.getElementById("navNameBar");
+          gwBar = document.getElementById("GaryWang");
+          menuBar = document.getElementById("menu");
+          yPos = window.pageYOffset;
+
+          if(yPos > 150){
+              topBar.style.height = "85px";
+              gwBar.style.fontFamily = "Playfair Display,serif";
+              gwBar.style.fontSize = "20px";
+              gwBar.style.top = "2px";
+              menuBar.style.marginTop  = "-30px";
+
+
+          } else{
+              topBar.style.height = "150px";
+              gwBar.style.fontFamily = "Allura,cursive";
+              gwBar.style.fontSize = "40px";
+              gwBar.style.top = "25px";
+              menuBar.style.marginTop  = "30px";
+
+
+          }
+
+
+
+        }
+
+
+
+       </script>
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+</html>
