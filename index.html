@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+<title> Gary Wang - a content developer that writes, speaks, and designs. </title>
+<link href="https://fonts.googleapis.com/css?family=Allura|Nunito|Muli" rel="stylesheet">
+<!-- <script type="text/javascript" src="style.js"></script> -->
+<link rel = "stylesheet" href = "pw.css" type = "text/css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+</head>
+
+
+<body>
+
+
+
+
+  <div id = "navNameBar" class = "nameBar">
+      <h1 class = "myName">Gary Wang<h1>
+        <div class = "navigationBar" style = "text-align:center;">
+          <ul class = "bar" style = "display:inline-block;">
+
+             <li><a href = GaryWang.html > ABOUT</a></li>
+             <li><a href= speak.html> SPEAK </a></li>
+             <li><a href = write.html> WRITE</a></li>
+             <li><a href = code.html> CODE </a></li>
+             <li><a href = shot.html> FIT</a></li>
+          </ul>
+        </div>
+  </div>
+
+
+<div id= "selfpage" class = "row">
+  <div id= "profile" class = "column" >
+     <img src = "gw.jpg" style = "border-radius:50%;width: 150px;">
+  </div>
+  <div id = "about" class = "column">
+     <p class = "introduction"> Hi, I am Gary. <br>I produce content that makes people laugh or nod. <br>
+      Hoop fan. Creative Developer. Language Guru.<br> Native to China, but highly adaptable to other environments.<br>
+      Intrigued by strangers and nutrition. <br> <br><br>
+
+      I speak, write, code, and design with a heart. <br>
+      Look at me on the left. Will get it right. Please feel free to say hi.
+
+     </p>
+  </div>
+</div>
+
+
+
+
+
+<div class = "footer" style = "width: 80%;background:none;">
+ <div class = "socialMedia">
+ <i class="fab fa-instagram"></i>
+ <i class="fab fa-facebook-f"></i>
+ <i class="fab fa-weixin"></i>
+ <i class="fas fa-envelope"></i>
+ </div>
+ <div >
+   <p style = "font-size: 12px;font-family: 'Nunito',sans-serif;position: relative;bottom:12px;">©Copyright 2018</p>
+</div>
+
+</div>
+
+
+
+<script>
+
+$(function(){
+  var header = $(".nameBar");
+  $(window).scroll(function(){
+    var scroll = $(window).scrollTop();
+    if (scroll >= 50){
+      header.addClass("scrolled");
+
+    }else{
+      header.removeClass("scrolled");
+
+    }
+
+
+  });
+
+});
+
+
+</script>
+
+
+
+
+
+</body>
+
+
+
+
+</html>
